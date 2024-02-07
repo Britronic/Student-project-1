@@ -1,0 +1,53 @@
+cursor.execute("""CREATE TABLE employeeTable(
+                employeeId text,
+                employeeName text,
+                gender text,
+                emailAddress text
+)
+""")
+cursor.execute("""CREATE TABLE managerTable(
+                managerName text,
+                managerId text,
+                emailAddress text
+)
+""")
+cursor.execute("""CREATE TABLE scheduleTable(
+                scheduleId text,
+                taskId text,
+                shiftId text,
+                data text,
+                managerId text,
+                employeeId text
+                
+)
+""")
+cursor.execute("""CREATE TABLE assignTaskTable(
+                taskTitle text,
+                taskId text,
+                taskemployeeId text,
+                taskManagerId text,
+                shiftId text
+                
+)
+""")
+cursor.execute("""CREATE TABLE shiftTable(
+                shiftId text,
+                taskId text,
+                scheduleDate text,
+                startTime text,
+                endTime text,
+                shiftManagerId text,
+                taskManagerId text
+                
+)
+""")
+cursor.execute("""CREATE TABLE requestTable(
+                requestId text,
+                requestName text,
+                employeeName text,
+                employeeId text,
+                managerName text,
+                managerId text
+                
+)
+""")
